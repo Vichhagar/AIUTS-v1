@@ -1,0 +1,25 @@
+
+
+<table class="table table-sm">
+    <tr>
+        <th>ID</th>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Time</th>
+        <th>Amount</th>
+        <th>Message</th>
+    </tr>
+    {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.transactionID }}</td>
+            <td>{{ transaction.username }}</td>
+            <td>{{ transaction.Receiver }}</td>
+            <td>{{ transaction.Time }}</td>
+            <td>{{ transaction.Amount }}</td>
+            <td>{{ transaction.Message }}</td>
+        </tr>
+        {% empty %}
+        <p>No transactions</p>
+    {% endfor %}
+</table>
+<a href="{% url 'User:home' %}"><button  type="button">Back</button><br></a>

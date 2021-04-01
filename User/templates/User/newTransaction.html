@@ -1,0 +1,13 @@
+
+    <h1>Make Transaction</h1>
+    <form method="post" action="{% url 'User:makeTransaction' %}">
+    
+        {% csrf_token %}
+        <h1>{{ form.as_p }}</h1>
+
+        <div>
+            <a href="{% url 'User:home' %}"><button  type="button">Back</button><br></a>
+            <button  type="submit">Save</button><br>
+        </div>
+
+	</form>

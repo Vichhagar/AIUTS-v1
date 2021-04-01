@@ -1,0 +1,9 @@
+
+<a href="{% url 'User:create' %}"><p>Create User</p></a>
+<a href="{% url 'User:transaction' %}"><p>All Transaction</p></a>
+
+{% for user in users %}
+    <a href="{% url 'User:detail' user.username %}"><p>{{ user.username }}</p></a>
+    {% empty %}
+    <p>No Users</p>
+{% endfor %}
