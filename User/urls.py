@@ -7,8 +7,8 @@ app_name = 'User'
 urlpatterns = [
     path('', views.UserList.as_view(), name='home'),
     path('detail/<str:pk>', views.UserDetail.as_view(), name='detail'),
-    #path('create/', views.AddUser.as_view(), name='create'),
-    path('create/', views.newUser, name='create'),
+    path('create/', views.AddUser.as_view(), name='create'),
+    #path('create/', views.cnewUser, name='create'),
     #makeTransaction
     path('makeTransaction/', views.makeTransaction.as_view(), name='makeTransaction'),
     path('Transaction/', views.AllTransaction.as_view(), name='transaction'),

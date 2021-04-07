@@ -1,0 +1,82 @@
+/* body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 80%;
+
+    margin: 20px auto;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: black solid 1px;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+button {
+    width: 200px;
+    height: 75px;
+} */
+
+h1 {
+    margin-top: 3rem;
+}
+
+/* html {
+    margin: 30px auto;
+    background-color: #74B8CE;
+} */
+
+/* body {
+    max-width: 60%;
+} */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 300px;
+    top: 250px;
+    font-size: 20px;
+    background-color: #6DC5C0;
+    padding: 40px 60px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left {
+    margin-top: 40px;
+    width: 200px;
+    margin-right: 100px;
+}
+
+.left > a {
+    margin: 20px 5px ;
+    /* border-bottom: solid black 1px; */
+    text-decoration: none;
+    color: white;
+}
+
+.line {
+    background-color: white;
+    width: 5px;
+    margin-right: 25px;
+    height: 200px;
+}
+
+.main-title {
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    background-color: #FDBA5A;
+    padding: 40px 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.usernamelist > ul > li {
+    margin-top: 10px;
+}

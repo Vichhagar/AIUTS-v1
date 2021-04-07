@@ -1,25 +1,47 @@
+{% extends 'User/base.html' %}
+{% block content %}
+
+<p></p>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb container">
+      <li class="breadcrumb-item"><a href="{% url 'User:home' %}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Transaction Summary</li>
+    </ol>
+  </nav>
+
+<h1 class="text-center">Transaction Summary</h1>
+<p></p>
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Sender</th>
+        <th scope="col">Receiver</th>
+        <th scope="col">Time</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for transaction in transactions %}
+      <tr>
+        <th scope="row">{{ transaction.transactionID }}</th>
+        <td>{{ transaction.username }}</td>
+        <td>{{ transaction.Receiver }}</td>
+        <td>{{ transaction.Time }}</td>
+        <td>AUC {{ transaction.Amount }}</td>
+        <td>{{ transaction.Message }}</td>
+      </tr>
+      {% empty %}
+      <p>No transactions</p>
+  {% endfor %}
+    </tbody>
+  </table>
+  <br>
+</div>
 
 
-<table class="table table-sm">
-    <tr>
-        <th>ID</th>
-        <th>Sender</th>
-        <th>Receiver</th>
-        <th>Time</th>
-        <th>Amount</th>
-        <th>Message</th>
-    </tr>
-    {% for transaction in transactions %}
-        <tr>
-            <td>{{ transaction.transactionID }}</td>
-            <td>{{ transaction.username }}</td>
-            <td>{{ transaction.Receiver }}</td>
-            <td>{{ transaction.Time }}</td>
-            <td>{{ transaction.Amount }}</td>
-            <td>{{ transaction.Message }}</td>
-        </tr>
-        {% empty %}
-        <p>No transactions</p>
-    {% endfor %}
-</table>
-<a href="{% url 'User:home' %}"><button  type="button">Back</button><br></a>
+  {% endblock %}
